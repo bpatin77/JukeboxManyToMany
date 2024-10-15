@@ -1,0 +1,27 @@
+{
+  "name": "jukeboxmanytomany",
+  "version": "1.0.0",
+  "description": "Introducing Jukebox, the successor to Jukebox Mini! We've secured some initial tracks for our digital music platform, so now users can add tracks to their playlists.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "seed": "node prisma/seed.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "prisma": "^5.21.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.21.0",
+    "nodemon": "^3.1.7"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  }
+}
