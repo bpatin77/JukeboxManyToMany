@@ -17,7 +17,7 @@ Content-Type: application/json
   "name": "Playlist 11",
   "description": "xnsnck jscndnc sdcd sas ssaxs sxas",
   "ownerId":3,
-  "trackId":4
+  "trackIds":[4]
 }
 
 ### Get a specified playlist, with tracks included

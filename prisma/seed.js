@@ -20,15 +20,15 @@ const seed = async (numUsers = 5, numPlaylists = 10, numTracks = 20) => {
     const ownerId = Math.floor(Math.random() * numUsers) + 1;
 
     // Select at least 8 unique random tracks for the playlist
-    const trackIds = new Set(); //creates a unique collection of track IDs for each playlist
+    const trackIds = []; //creates a unique collection of track IDs for each playlist
     //Set: This is a built-in JavaScript object that stores unique values. When you add an item to a Set, it will only be added if it is not already present.
-    while (trackIds.size < 8) {
+    while (trackIds.length < 8) {
       //This while loop continues until the trackIds Set contains at least 8 unique track IDs.
-      trackIds.add(Math.floor(Math.random() * numTracks) + 1);
+      trackIds.push(Math.floor(Math.random() * numTracks) + 1);
     }
 
     // Convert Set to Array for connect
-    const catalog = Array.from(trackIds).map((id) => ({ id }));
+    const catalog = trackIds.map((id) => ({ id }));
 
     await prisma.playlist.create({
       data: {
